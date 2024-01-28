@@ -1,0 +1,416 @@
+:root {
+    --header-background-color: #1b1e1f;
+    --header-text-font: #f4f4f4;
+    --description-background-color: #2b2b2b; 
+    --more-color:#4eabed;
+    --card-container-background-color:#161616;
+    --partners-section-background-color:#2b2b2b;
+    --terms-and-conditions-color:#dbdbdb;
+    --font_0: normal normal normal 24px/1.6em wfont_643d94_dd28b3957391427eb54de1c9eff7cfb1,wf_dd28b3957391427eb54de1c9e,orig_tbc_x_regular;
+    --card_border-color:#555555;
+    --font_11: normal normal normal 48px/1.6em wfont_643d94_f52303b2efea42e1b4aeed119e42672e,wf_f52303b2efea42e1b4aeed119,orig_tbc_x_black;
+   --border_color:#343131;
+    --above-all-z-index: 100000;
+    --portals-z-index: 100001;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --minViewportSize: 320;
+    --maxViewportSize: 1920;
+    --theme-spx-ratio: 1px;
+    --footer_color:#1b1e1f;
+
+}
+a{
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial,Helvetica,sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-background-color);
+    height:84px;
+    padding: 0 30% 0 25%;
+    width:100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoImg {
+    width: 182px;
+    height: 40px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.headerNav ul {
+    list-style: none;
+    display: flex;
+
+}
+.navTitles{
+    line-height: 26px
+}
+.headerNav li {
+    margin: 0 10px;
+    padding: 0 5px;
+}
+
+.headerNav a {
+    text-decoration: none;
+    color: var(--header-text-font);
+   
+}
+a:hover{
+    cursor: pointer;
+}
+.sectionBanner {
+    background-image: url('https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 352px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 25%;
+}
+h1{
+    color:var(--header-text-font);
+   font-family:var(--font_11);
+    font-size: 41px;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+.bannerTittle2{
+    
+    width: 980px;
+    height: 138px;
+    font-size: 34px !important;
+}
+.description{
+    background-color: var(--description-background-color);
+    color:  var(--header-text-font);
+    height: 464px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 25%;
+
+}
+.descText{
+    font-size: 28px;
+}
+.more{
+    color: var(--more-color);
+    font-size: 20px;
+    padding-top: 40px;
+}
+.cardSection{
+    background-color: var( --card-container-background-color);
+    height: 1486px;
+    padding: 0 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cardWrapperTitle{
+    color:  var(--header-text-font);
+    font-family:var(--font_0);
+    font-weight: 200;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 300px;
+    height: 414px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px var(--card_border-color) solid;
+    border-radius: 4px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+
+}
+
+.card h2{
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.card p{
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.card h2, .card p{
+  color: var(--header-text-font);
+
+}
+.card .arrow{
+        width: 16px;
+        height: 13px;
+        padding-right:5px;
+   
+}
+#arrow{
+    fill:var(--more-color);
+}
+.card-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 60%;
+    padding-left: 10px;
+
+    justify-content: space-evenly;
+}
+
+.card-content a {
+    display: flex;
+    margin-top: 10px;
+    text-decoration: none;
+    flex-direction: row;
+    align-items: center;
+   
+}
+.content-link p{
+    font-size: 16px;
+    color:var(--more-color);
+}
+
+.partnersSection{
+    background-color: var(--description-background-color);
+    width:100%;
+    height: 363.4px;
+    display: flex;
+    flex-direction: column;
+}
+.partnersSectTitle{
+    padding: 0 25%;
+    color: var(--header-text-font);
+    font-size: 24px;
+    font-weight: 300;
+    justify-self: flex-start;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .slider-page {
+    flex: 0 0 100%;
+  }
+  
+  
+  .slider-dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .next {
+    width: 20px;
+    height: 20px; 
+    background-image: url('./assets/next.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.previous {
+    width: 20px; 
+    height: 20px;
+    background-image: url('./assets/previous.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    
+}
+.PartnersLogo{
+    width: 270px;
+    height: 90px;
+
+}
+
+  .partnersSliderWrapDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 224px;
+    justify-content: space-between;
+    padding: 0 2%;   
+  }
+  .faq{
+    background-color: var(--card-container-background-color);
+    height: 484px;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 25% 0 25%;
+    height: paddi;
+    justify-content: space-around;
+    color: var(--header-text-font);
+  }
+
+.faqItem {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--border_color);
+    color: var(--header-text-font);
+  }
+  
+  .answer {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .faqItem.active .answer {
+    display: block;
+    max-height: 500px; /* Adjust as needed based on your content */
+  }
+.faqWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-evenly;
+}
+  .toggleAnswerBtn {
+   
+    background-image: url('./assets/previous.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+    transform: rotate(270deg);
+    border: none; /* Remove border if not needed */
+    
+    cursor: pointer; /* Add cursor style for interaction */
+  }
+  
+  .rotate-90 {
+    transform: rotate(90deg);
+}
+/* Add or modify styles as needed */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%; /* Set the width as per your design */
+    background-color: var(--description-background-color);
+    color:var(--terms-and-conditions-color) ;
+    overflow-y: auto;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for a visual separation */
+}
+
+.popup-content {
+    padding: 20px;
+    
+}
+
+.close-btn {
+    background-color: var(--terms-and-conditions-color) ;
+    color:var(--description-background-color);
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    width: 100%; /* Make the button full width */
+    box-sizing: border-box;
+}
+footer{
+    background-color: var(--footer_color);
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    padding: 0 25%;
+    justify-content: space-between;
+    height: 228px;
+    color: var(--header-text-font);
+}
+.company{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.company img{ 
+       width: 106px;
+    height: 30px;
+
+}
+.company span{
+    display: flex;
+    flex-direction: column;
+}
+.socLogos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+}
+.soclogos img{
+    width: 39px;
+    height: 39px;
+}
+.rightSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.termsConditions{
+    display: flex;
+    flex-direction: row;
+}
+.contact{
+    width: 162px;
+    height: 39px;
+    background-color: var(--more-color);
+    color: var(--header-text-font);
+    font-size: 16px;
+    border-radius: 7px;
+}
+#popupTrigger{
+    color: var(--terms-and-conditions-color);
+}
