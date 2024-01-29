@@ -20,7 +20,17 @@
           <li><a href="index.html" class="navTitles">TBC x USAID</a></li>
           <li><a href="#" class="navTitles">რისკები</a></li>
         </ul>
+        <div class="burger-menu">☰</div>
+       
       </nav>
+      <div class="burger-content">
+        <ul class="burger-navList">
+            <li><a href="#" class="navTitles">მთავარი</a></li>
+            <li><a href="#" class="navTitles">TBC IT</a></li>
+            <li><a href="index.html" class="navTitles">TBC x USAID</a></li>
+            <li><a href="#" class="navTitles">რისკები</a></li>
+        </ul>
+    </div>
     </header>
 
     <main>
@@ -50,28 +60,15 @@
         <div id="cards-container"></div>
       </section>
 
-      <!-- <section class="partnersSection">
-        <h2 class="partnersSectTitle">პროექტის პარტნიორები</h2>
-        <div class="partnersSliderWrapDiv">
-          <button class="previous"></button>
-          <div class="slider">
-            div
-          </div>
-          <button class="next"></button>
-
-        </div>
-      </section> -->
-
-      <!-- ... (previous HTML code) ... -->
-
+   
       <section class="partnersSection">
         <h2 class="partnersSectTitle">პროექტის პარტნიორები</h2>
         <div class="partnersSliderWrapDiv">
           <button class="previous" onclick="changeSlide(-1)"></button>
           <div class="slider">
-            <!-- Each component/page of the slider -->
+          
             <div class="slider-page">
-              <!-- Content for the first page -->
+      
               <div class="page1Content">
                 <a href="" class="page1component"
                   ><img
@@ -144,6 +141,7 @@
         <div class="faqWrapper">
           <!-- FAQ items -->
           <div class="faqItem">
+            <div class="questionDiv">
             <h3 class="question">
               როგორ ხდება კურსებზე რეგისტრაცია და შერჩევა?
             </h3>
@@ -151,6 +149,7 @@
               class="toggleAnswerBtn"
               onclick="toggleRotation(this)"
             ></button>
+          </div>
             <div class="answer">
               კურსზე რეგისტრაციისთვის უნდა გაიარო რამდენიმე ეტაპი:<br />
 
@@ -181,6 +180,7 @@
           </div>
 
           <div class="faqItem">
+            <div class="questionDiv">
             <h3 class="question">
               შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია?
             </h3>
@@ -189,6 +189,7 @@
               class="toggleAnswerBtn"
               onclick="toggleRotation(this)"
             ></button>
+          </div>
 
             <div class="answer">
               TBC X USAID ტექნოლოგიური განათლებისთვის პროგრამაში თითოეულ
@@ -199,13 +200,14 @@
           </div>
 
           <div class="faqItem">
+            <div class="questionDiv">
             <h3 class="question">რა ღირს სწავლა პროგრამის ფარგლებში?</h3>
 
             <button
               class="toggleAnswerBtn"
               onclick="toggleRotation(this)"
             ></button>
-
+</div>
             <div class="answer">
               პროგრამის ფარგლებში კურსებზე სწავლა სრულიად დაფინანსებულია თიბისი
               ბანკისა და USAID-ის მიერ.

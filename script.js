@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         generateCardsHTML(jsonData);
     });
     faqAnswer();
+    burgerMenu();
 });
 
 function generateCardsHTML(data) {
@@ -94,6 +95,7 @@ faqWrapper.addEventListener('click', function (event) {
 
 function toggleRotation(button) {
     button.classList.toggle('rotate-90');
+
 }
 
 document.getElementById('popupTrigger').addEventListener('click', function() {
@@ -103,3 +105,53 @@ document.getElementById('popupTrigger').addEventListener('click', function() {
 function closePopup() {
     document.getElementById('popupContainer').style.display = 'none';
 }
+
+function burgerMenu() {
+
+    const burgerMenu = document.querySelector('.burger-menu');
+   
+    const burgerContent = document.querySelector('.burger-content');
+    const body =  document.querySelector('body');
+    // Add event listener to burger menu for click event
+    burgerMenu.addEventListener('click', function() {
+        // Toggle the display of the burger menu content
+        if (burgerContent.style.display === 'block') {
+            body.style.overflowY='scroll';
+            burgerContent.style.display = 'none';
+        } else {
+            burgerContent.style.display = 'block';
+            body.style.overflowY='hidden';
+        }
+    });
+}
+
+
+
+const currentPageUrl = window.location.href;
+const navTitles = document.querySelectorAll('.navTitles');
+
+// Function to remove 'active' class from all nav titles
+function removeAllActive() {
+    navTitles.forEach(title => {
+        title.classList.remove('active');
+    });
+}
+
+// Add event listeners to nav titles
+navTitles.forEach(navTitle => {
+    navTitle.addEventListener('click', function() {
+        // Remove 'active' class from all nav titles
+        removeAllActive();
+        // Add 'active' class to clicked nav title
+        this.classList.add('active');
+    });
+
+    // Check if the href matches the current page URL
+    if (navTitle.href === currentPageUrl) {
+        // Remove 'active' class from all nav titles
+        removeAllActive();
+        // Add 'active' class to the nav title with matching href
+        navTitle.classList.add('active');
+    }
+});
+
