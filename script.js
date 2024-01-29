@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     faqAnswer();
     burgerMenu();
+ 
 });
 
 function generateCardsHTML(data) {
@@ -132,8 +133,25 @@ function burgerMenu() {
             line3.style.transform = 'rotate(45deg)';
         }
     }
+    function handleDisplay() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth > 767) {
+            burgerContent.style.display = 'none';
+            body.style.overflowY = 'scroll';
+            line1.style.transform = 'none';
+            line2.style.opacity = '1';
+            line2.style.transform = 'none';
+            line3.style.transform = 'none';
+        } 
+        
+    }
 
     burgerMenu.addEventListener('click', toggleMenu);
+    window.addEventListener('resize', handleDisplay);
+
+    // Call handleDisplay initially
+    handleDisplay();
+
 }
 
 
@@ -168,4 +186,3 @@ navTitles.forEach(navTitle => {
         navTitle.classList.add('active');
     }
 });
-
